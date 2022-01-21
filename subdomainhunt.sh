@@ -11,10 +11,10 @@ echo "i developed this tool for educational purpose only. iam not responsible if
 echo 'welcome to subdomain finder'
 echo 'provide a domain name ex:hello.com'
 read domain
-echo 'provide full path to the subdomains file ex:subdomains.txt'
+echo 'please copy the subdomain list file to the tool home directory(subdomainhunt directory) & enter the name of the file ex:subdomains.txt'
 read subdomain
-echo 'all your output will be stored in a file called subsoutput.txt'
+echo 'your all output will be stored in file name called subsoutput.txt'
 while read sub  
 do 
-	host $sub'.'$domain|grep address >> subsoutput.txt
+	host $sub'.'$domain >> subsoutput.txt
 done < $subdomain
