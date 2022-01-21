@@ -16,5 +16,5 @@ read subdomain
 echo 'your all output will be stored in file name called subsoutput.txt'
 while read sub  
 do 
-	host $sub'.'$domain >> subsoutput.txt
+	host $sub'.'$domain |grep -v 'not found' >> subsoutput.txt
 done < $subdomain
